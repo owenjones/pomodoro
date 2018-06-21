@@ -1,5 +1,4 @@
-# Pomodoro
-## A simple standalone pomodoro timer.
+# Pomodoro - a simple standalone pomodoro timer.
 
 ### Usage
 Choose an amount of time to work for, the amount of time to take a break, and how many times you want the cycle to repeat...
