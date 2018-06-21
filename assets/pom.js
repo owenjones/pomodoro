@@ -58,7 +58,7 @@ function changeMode() {
 
   active = (interval) ? "work" : "interval";
   inactive = (interval) ? "interval" : "work";
-  /*$("audio#" + active)[0].play();*/
+  $("#alarm")[0].play();
   removeClock();
   $("#current").text(itercount.toString());
   interval = !interval;
