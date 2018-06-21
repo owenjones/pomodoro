@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8" />
+	  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="stylesheet" href="assets/base.css"  />
+		<script type="text/javascript" src="assets/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="assets/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="assets/timer.jquery.min.js"></script>
+		<script type="text/javascript" src="assets/pom.js"></script>
+		<title>Pomodoro</title>
+	</head>
+
+	<body class="work">
+		<audio id="interval" src="assets/tointerval.wav" autoplay="false" /></audio>
+		<audio id="work" src="assets/towork.wav" autoplay="false" /></audio>
+
+		<div id="container">
+			<div id="setup">
+				<h1>Pomodoro</h1>
+				<form id="inputfields">
+					<fieldset>
+						<p>
+							<label for="length">Working For</label>
+							<input id="i-work" type="number" name="length" value="25" /> minutes
+						</p>
+
+						<p>
+							<label for="interval">Interval</label>
+							<input id="i-int" type="number" name="interval" value="5" /> minutes
+						</p>
+
+						<p>
+							<label for="repeat">Repeat</label>
+							<input id="i-rep" type="number" name="repeat"  value="4" /> time(s)
+							<div class="info">0 will give infinite repetition</div>
+						</p>
+					</fieldset>
+
+					<button id="go">Pomodor-go!</button>
+				</form>
+			</div>
+
+			<div id="timer">
+				<div id="back">
+
+				</div>
+
+				<div id="intervals">
+					<span id="current">1</span>/<span id="maxint">0</span>
+				</div>
+
+				<div id="clock" class="work">00:00</div>
+
+				<div id="controls">
+					<button id="restart">Restart Interval</button>
+					<button id="startstop">Pause</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

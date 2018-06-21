@@ -1,0 +1,150 @@
+@import 'normalise.css';
+@import url('https://fonts.googleapis.com/css?family=Pridi:200,300,400,500');
+
+* {
+  border: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Pridi', serif;
+  font-size: 18px;
+}
+
+body.work {
+  background: rgb(207, 0, 15);
+}
+
+body.interval {
+  background: rgb(30,136,229);
+}
+
+button {
+  display: block;
+  padding: 15px;
+  min-width: 220px;
+  width: 100%;
+  font-family: 'Pridi', serif;
+  background: rgba(1, 1, 1, 0.05);
+  border-radius: 6px;
+  box-shadow: 0 0 2px rgba(1, 1, 1, 0.4);
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  padding: 20px;
+  margin: 0;
+}
+
+#container {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -- Setup View -- */
+#setup {
+  background: rgba(254, 254, 254, 1);
+  padding: 20px 40px;
+  border-radius: 6px;
+  box-shadow: 0 0 1px rgba(1, 1, 1, 0.3);
+}
+
+#setup form {
+  display: table;
+}
+
+#setup fieldset p {
+  display: table-row;
+  font-weight: 200;
+}
+
+#setup label {
+  display: table-cell;
+  padding: 10px 20px 10px 0;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.05pt;
+}
+
+#setup input[type="number"] {
+  display: table-cell;
+  padding: 10px;
+  margin-top: 15px;
+  margin-right: 5px;
+  border-bottom: 1px dotted rgba(1, 1, 1, 0.5);
+  width: 42px;
+  color: rgb(1,1,1);
+  font-family: 'Pridi', serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+
+#setup .info {
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 200;
+  text-align: center;
+}
+
+#setup button#go {
+  margin-top: 20px;
+}
+
+/* -- Timer View -- */
+#timer {
+  display: none;
+  background: rgba(254, 254, 254, 1);
+  padding: 20px 40px;
+  border-radius: 6px;
+  box-shadow: 0 0 1px rgba(1, 1, 1, 0.3);
+  min-width: 525px;
+  /* min-height: 225px; */
+}
+
+#timer #intervals {
+  text-align: right;
+  padding: 0 5px 10px 0;
+  font-size: 20px;
+}
+
+#timer #clock {
+  margin: auto;
+  padding: 20px 0;
+  font-size: 120px;
+  text-align: center;
+}
+
+#clock.work {
+  color: rgb(207, 0, 15);
+}
+
+#clock.interval {
+  color: rgb(30,136,229);
+}
+
+#timer #controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+#timer button {
+  padding: 12px;
+  font-size: 16px;
+}
+
+#timer button#startstop {
+  margin-left: 10px;
+}
