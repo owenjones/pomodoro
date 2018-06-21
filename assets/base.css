@@ -106,20 +106,27 @@ h1 {
 #timer {
   display: none;
   background: rgba(254, 254, 254, 1);
-  padding: 20px 40px;
+  /*padding: 20px 40px;*/
+	padding: 10px;
   border-radius: 6px;
   box-shadow: 0 0 1px rgba(1, 1, 1, 0.3);
   min-width: 525px;
   /* min-height: 225px; */
 }
 
+#timer #back {
+	float: left;
+}
+
 #timer #intervals {
-  text-align: right;
+	float: right;
+	text-align: right;
   padding: 0 5px 10px 0;
   font-size: 20px;
 }
 
 #timer #clock {
+	clear: both;
   margin: auto;
   padding: 20px 0;
   font-size: 120px;
@@ -137,7 +144,7 @@ h1 {
 #timer #controls {
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
+  padding: 10px 20px;
 }
 
 #timer button {
