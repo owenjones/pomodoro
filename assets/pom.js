@@ -39,7 +39,7 @@ function startClock() {
   t = (interval) ? intervalTime : workTime;
   $("#clock").timer({
     countdown: true,
-    duration: t.toString() + "m",
+    duration: (t-1).toString() + "m59s",
     format: "%M:%S",
     callback: changeMode})
 }
@@ -58,18 +58,18 @@ function changeMode() {
 
   active = (interval) ? "work" : "interval";
   inactive = (interval) ? "interval" : "work";
+	$("#alarm").prop("volume", 1.0)
   $("#alarm")[0].play();
   removeClock();
+	startClock();
   $("#current").text(itercount.toString());
-  interval = !interval;
   $("body").switchClass(inactive, active, 450, 'linear');
-  $("#clock").switchClass(inactive, active, 450, 'linear', function() {
-    startClock();
-  });
+  $("#clock").switchClass(inactive, active, 450, 'linear');
+	interval = !interval;
 }
 
 $(document).ready(function() {
-  $("input[type='number']").on("focus", function () {
+  $("input[type='number']").on("focus", function() {
     $(this).select();
   });
 
@@ -78,6 +78,11 @@ $(document).ready(function() {
     event.preventDefault();
     init();
   });
+
+	$("#go").on("click", function() {
+		$("#alarm").prop("volume", 0);
+		$("#alarm")[0].play();
+	});
 
   $("#restart").click(function(event) {
     removeClock();
