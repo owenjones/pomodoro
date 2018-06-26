@@ -58,14 +58,14 @@ function changeMode() {
 
   active = (interval) ? "work" : "interval";
   inactive = (interval) ? "interval" : "work";
-	$("#alarm").prop("volume", 1.0)
+  $("#alarm").prop("volume", 1.0)
   $("#alarm")[0].play();
   removeClock();
-	startClock();
+  interval = !interval;
+  startClock();
   $("#current").text(itercount.toString());
   $("body").switchClass(inactive, active, 450, 'linear');
   $("#clock").switchClass(inactive, active, 450, 'linear');
-	interval = !interval;
 }
 
 $(document).ready(function() {
@@ -79,10 +79,10 @@ $(document).ready(function() {
     init();
   });
 
-	$("#go").on("click", function() {
-		$("#alarm").prop("volume", 0);
-		$("#alarm")[0].play();
-	});
+  $("#go").on("click", function() {
+    $("#alarm").prop("volume", 0);
+    $("#alarm")[0].play();
+  });
 
   $("#restart").click(function(event) {
     removeClock();
